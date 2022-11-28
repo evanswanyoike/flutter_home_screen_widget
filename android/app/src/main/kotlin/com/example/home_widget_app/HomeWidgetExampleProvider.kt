@@ -11,7 +11,7 @@ import es.antonborri.home_widget.HomeWidgetProvider
 
 class HomeWidgetExampleProvider : HomeWidgetProvider() {
 
-    fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray, widgetData: SharedPreferences) {
+    override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray, widgetData: SharedPreferences) {
         appWidgetIds.forEach { widgetId ->
             val views = RemoteViews(context.packageName, R.layout.example_layout).apply {
                 // Open App on Widget Click
